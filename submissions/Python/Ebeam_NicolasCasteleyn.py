@@ -98,7 +98,6 @@ class Michelson(i3.Circuit):
     
     def annotate_trace_template(trace):
         return {"trace template": trace.trace_template.cell.__class__.__name__}
-MZI = Michelson
 #%%
 ### LAYOUT ###
 
@@ -125,7 +124,7 @@ for ind, delay_length in enumerate(delay_lengths):
     if ind == 4:
         x0 += 20.0  # Add extra spacing before the last MZI
     # Instantiate the MZI
-    mzi = MZI(
+    mzi = Michelson(
         name=f"Michelson{ind}",
         delay_length=delay_length,
         bend_radius=bend_radius,
