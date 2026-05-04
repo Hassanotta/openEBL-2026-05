@@ -1,10 +1,9 @@
 import numpy as np
-from michelson_pcell import Michelson as MZI
 from siepic import all as pdk
 from ipkiss3 import all as i3
+from ipkiss.technology import get_technology
 
 #%%
-from ipkiss.technology import get_technology
 
 TECH = get_technology()
 
